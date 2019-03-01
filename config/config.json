@@ -1,0 +1,19 @@
+{
+  "server": {
+    "path": "http://localhost:3000",
+    "secure": "loftschool"
+  },
+  "mail": {
+    "subject": "Сообщение с сайта",
+    "smtp": {
+      "host": "smtp.gmail.com",
+      "port": 465,
+      "secure": true,
+      "auth": {
+        "user": "isquad12@gmail.com",
+        "pass": "ReactJS22$"
+      }
+    }
+  },
+  "upload": "./public/upload"
+}

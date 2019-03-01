@@ -1,0 +1,19 @@
+{
+  "script": "app.js",
+  "watch": [
+    "app.js",
+    "views",
+    "rest",
+    "contrillers",
+    "engine",
+    "db"
+  ],
+  "ignore": [
+    "node_modules",
+    "public"
+  ],
+  "env": {
+    "NODE_ENV": "development"
+  },
+  "ext": "js css html pug json"
+}

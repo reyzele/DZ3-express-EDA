@@ -1,0 +1,65 @@
+{
+  "goods": [
+    {
+      "picture": "./img/products/Work1.jpg",
+      "name": "Вино вдохновение",
+      "price": 600
+    },
+    {
+      "picture": "./img/products/Work2.jpg",
+      "name": "Вино вдохновение",
+      "price": 600
+    },
+    {
+      "picture": "./img/products/Work3.jpg",
+      "name": "Вино вдохновение",
+      "price": 600
+    },
+    {
+      "picture": "./img/products/Work4.jpg",
+      "name": "Вино вдохновение",
+      "price": 600
+    },
+    {
+      "picture": "./img/products/Work5.jpg",
+      "name": "Вино вдохновение",
+      "price": 600
+    },
+    {
+      "picture": "./img/products/Work6.jpg",
+      "name": "Вино вдохновение",
+      "price": 600
+    },
+    {
+      "picture": "./img/products/Work7.jpg",
+      "name": "Вино вдохновение",
+      "price": 600
+    },
+    {
+      "picture": "./img/products/Work8.jpg",
+      "name": "Вино вдохновение",
+      "price": 600
+    },
+    {
+      "picture": "./img/products/Work9.jpg",
+      "name": "Вино вдохновение",
+      "price": 600
+    },
+    {
+      "picture": "\\upload\\viking.png",
+      "name": "viking11",
+      "price": "750"
+    }
+  ],
+  "skills": {
+    "age": "11",
+    "concerts": "12",
+    "cities": "44",
+    "years": "44"
+  },
+  "user": {
+    "email": "admin@gmail.com",
+    "hash": "e87e8c97be965f1a8894dd801d5fd5b1bf3fd060904115ecf2846df93dcfd725203e084f6f6ffaf60190cfa6e21d3a45658a905f23386d6938fb6b29062271daab2ff144b0907b22c3393882a71c340fc4a008d948a25cb3540b5daadc4c98fb36c55d5d3e43a27712f36f0b1f0ec6d382c798a47bba3f8ee643d230b750e5dc9747df3033dbdc61e2765e116da6b6f8a6fba848b070850f2601ee6e0597734219f330854f203a2b41028f417c706b6e2c9fd52e17c83097ddc791fe39324e039c9fc0b368e581a0d03322864be4ee3178a9ccfbb944791ba36e8166519f47ebf56b2c2654a15cbf0d0bcb729a05dc2c46ee5e5f3f04c2fe60e77d0447fcd2639c2ea2f4a40ec97a1844e44194aa23453404b1f832d5cb39e6f4c18fca4c51144c76c4d8f14895e5abb009bd78fb51388cc9f94ec9a170eb80c02adb2995f0d0c7132e3b86a5ff31240e11277a5840b4a182445c87ba0c0ce0a33dbfe0a036e07f2f1673dbbf0e6050a6f04019f00e48651e910bdaa540bfd89c2b926de77b57f844cec1bff338cdf1931d9903ec682e9f5eb3521ddc3d0457230dc2f2894cedcae46a4fd52d41601f97486ab2b87ec2f4eeb6b6afda1a47350a2aa1922a493c252ab5fe16d3bdb9bbf70f674a2a1e1df2dc0af949712eb214e9451e3cb7a270025001895513662d1ad677c09186d594df5301ab52f5b1da7c3341a3574f3824",
+    "salt": "e62dabb19539b300b21a4232be0a1e43"
+  }
+}

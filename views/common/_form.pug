@@ -1,0 +1,18 @@
+section.form
+  .container
+    .form__status.badge.badge-success= msgemail
+    .form__subtitle.subtitle Контактные данные
+    h2.form__title.title Пишите, пообщаемся
+    form(action="/" method="POST" enctype="application/x-www-form-urlencoded").form-email
+      .form-email__line
+        label.form-email__label(for="") Имя *
+        input.form-email__input(type="text" name="name")
+      .form-email__line
+        label.form-email__label(for="") Email *
+        input.form-email__input(type="email" name="email")
+      .form-email__line
+        label.form-email__label(for="") Сообщение
+        textarea(name="message").form-email__textarea
+      .form-email__line
+        button(type="submit").form-email__button.button Отправить
+    
