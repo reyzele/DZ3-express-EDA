@@ -92,30 +92,58 @@ ENGINE.on('skills/post', response => {
 });
 
 ENGINE.on('sendmail', response => {
-  const { name, email, text } = response.data;
-
-  if (!name || !email || !text) {
-    return response.reply({
-      msg: 'Все поля нужно заполнить!',
-      status: 'Error'
-    });
-  }
-
   const schema = joi.object().keys({
     name: joi
       .string()
       .min(3)
       .max(20)
-      .required(),
+      .required()
+      .error(err => {
+        switch (err[0].type) {
+          case 'any.empty':
+            return 'Введите пожалуйста имя';
+          case 'string.min':
+            return 'Слишком короткое имя';
+          case 'string.max':
+            return 'Слишком длинное имя';
+          default:
+            break;
+        }
+      }),
     email: joi
       .string()
       .email()
-      .required(),
+      .max(30)
+      .required()
+      .error(err => {
+        switch (err[0].type) {
+          case 'any.empty':
+            return 'Введите пожалуйста Email';
+          case 'string.email':
+            return 'Не правильный Email';
+          case 'string.max':
+            return 'Слишком длинный Email';
+          default:
+            break;
+        }
+      }),
     text: joi
       .string()
       .min(20)
       .max(500)
       .required()
+      .error(err => {
+        switch (err[0].type) {
+          case 'any.empty':
+            return 'Введите пожалуйста текст';
+          case 'string.min':
+            return 'Слишком короткий текст';
+          case 'string.max':
+            return 'Слишком длинный текст';
+          default:
+            break;
+        }
+      })
   });
 
   joi.validate(response.data, schema, (err, { name, email, text }) => {
@@ -149,21 +177,49 @@ ENGINE.on('sendmail', response => {
 });
 
 ENGINE.on('login', async response => {
-  const { password, email } = response.data.body;
-
-  if (!email) {
-    return response.replyErr('Please enter email');
-  }
-
-  if (!password) {
-    return response.replyErr('Please enter password');
-  }
-
+  const schema = joi.object().keys({
+    email: joi
+      .string()
+      .email()
+      .max(30)
+      .required()
+      .error(err => {
+        switch (err[0].type) {
+          case 'any.empty':
+            return 'Введите пожалуйста Email';
+          case 'string.email':
+            return 'Не правильный Email';
+          case 'string.max':
+            return 'Слишком длинный Email';
+          default:
+            break;
+        }
+      }),
+    password: joi
+      .string()
+      .min(3)
+      .required()
+      .error(err => {
+        switch (err[0].type) {
+          case 'any.empty':
+            return 'Введите пароль';
+          case 'string.min':
+            return 'Короткий пароль';
+          default:
+            break;
+        }
+      })
+  });
   const user = await db.getState().user;
+  joi.validate(response.data.body, schema, (err, { password, email }) => {
+    if (err) {
+      return response.replyErr(err.details[0].message);
+    }
 
-  if (user.email === email && psw.validPassword(password)) {
-    return response.reply('/admin');
-  } else {
+    if (user.email === email && psw.validPassword(password)) {
+      return response.reply('/admin');
+    }
+
     return response.replyErr('Enter the correct username and password!');
-  }
+  });
 });
