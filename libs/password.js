@@ -1,5 +1,4 @@
 const crypto = require('crypto');
-
 const db = require('../db/lowDB');
 
 module.exports.setPassword = password => {

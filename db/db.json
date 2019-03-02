@@ -44,18 +44,13 @@
       "picture": "./img/products/Work9.jpg",
       "name": "Вино вдохновение",
       "price": 600
-    },
-    {
-      "picture": "\\upload\\viking.png",
-      "name": "viking11",
-      "price": "750"
     }
   ],
   "skills": {
-    "age": "11",
-    "concerts": "12",
-    "cities": "44",
-    "years": "44"
+    "age": "55",
+    "concerts": "66",
+    "cities": "77",
+    "years": "88"
   },
   "user": {
     "email": "admin@gmail.com",

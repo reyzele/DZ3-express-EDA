@@ -2,11 +2,9 @@
   "script": "app.js",
   "watch": [
     "app.js",
-    "views",
     "rest",
     "contrillers",
-    "engine",
-    "db"
+    "engine"
   ],
   "ignore": [
     "node_modules",
